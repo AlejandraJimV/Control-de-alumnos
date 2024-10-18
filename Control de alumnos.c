@@ -1,3 +1,9 @@
+/*
+Creado por Alejandra Jim茅nez Venegas 
+Estructuras de Datos 
+Este c贸digo es un ejemplo de c贸mo gestionar una lista de alumnos utilizando estructuras de datos din谩micas en C.
+La combinaci贸n de funciones para manipular la lista y la interacci贸n con el 
+usuario permite crear un sistema funcional para el manejo de datos acad茅micos.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,7 +17,7 @@ struct Nodo {
     struct Nodo* siguiente;
 };
 
-// Dise駉
+// Dise锟給
 void borrar();
 char menu();
 void gotoxy(int x, int y);
@@ -423,7 +429,7 @@ void abrir(struct Nodo** lista, size_t tamanoDatos, const char* nombreArchivo) {
     while (fgets(linea, sizeof(linea), archivo) != NULL) {
         // Incrementar i antes de imprimir
         i++;
-        // Imprimir las l韓eas del archivo
+        // Imprimir las l锟絥eas del archivo
         gotoxy(5, 5 + i);
         printf("%s", linea);
 
@@ -639,7 +645,7 @@ void mostrarMatriculas(struct Nodo* lista) {
         gotoxy(x, 22);
         printf("%c", 192);
 
-        int lon = snprintf(NULL, 0, "%d", alumno->matricula); // Calcular longitud del n鷐ero
+        int lon = snprintf(NULL, 0, "%d", alumno->matricula); // Calcular longitud del n锟絤ero
         char matriculaStr[lon + 1]; 
         snprintf(matriculaStr, sizeof(matriculaStr), "%d", alumno->matricula);
 
